@@ -1,8 +1,10 @@
-n=1
+#Euler 48
+
+mod = 10000000000
 total = 0
 
-while n<=1000:
-    total += n**n
-    n+=1
+for i in range(1,1001):
+	powerOfSelf = (i**i) % mod
+	total = ((total + powerOfSelf) % mod)
 
-print total % 10000000000
+print "The answer is: " + str(total)
